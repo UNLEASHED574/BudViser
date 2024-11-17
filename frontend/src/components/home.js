@@ -1,6 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  const handleUploadClick = () => {
+
+    navigate("/suggestion"); // Redirect to /suggestion endpoint
+  };
+
   return (
     <div
       style={{
@@ -42,6 +51,7 @@ const Home = () => {
           </p>
         </div>
         <button
+        onClick={handleUploadClick}
           style={{
             marginTop: "15px",
             padding: "10px 20px",
